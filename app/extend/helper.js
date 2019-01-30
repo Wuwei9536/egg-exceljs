@@ -84,7 +84,7 @@ module.exports = {
         this.ctx.body = await workbook.xlsx.writeBuffer();
     },
 
-// ------------------------------------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------------------------------------
 
     //complex
     async excelNewComplex(url, req, headers, name, func) {
@@ -114,7 +114,7 @@ module.exports = {
         // let result = await this.ctx.curl(url);
         // let data = result.data;
         // if (func) data = func(data);
-        let data={"data":[]}    //需要在这边自己适配数据，这边为空
+        let data = { "data": [] }    //需要在这边自己适配数据，这边为空
 
         //处理合计行
         if (JSON.stringify(hjRow) != "{}") {
@@ -181,6 +181,6 @@ module.exports = {
         this.ctx.set('Content-Type', 'application/vnd.openxmlformats');
         this.ctx.set('Content-Disposition', "attachment;filename*=UTF-8' '" + encodeURIComponent(name) + '.xlsx');
         this.ctx.body = await workbook.xlsx.writeBuffer();
-    }
+    },
 };
 

@@ -8,4 +8,5 @@ module.exports = app => {
   router.get('/', controller.home.index);
   router.get('/simple', controller.simple.excel);
   router.get('/complex', controller.complex.excel);
+  router.post('/import', controller.import.index);
 };

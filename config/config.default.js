@@ -3,6 +3,16 @@
 module.exports = appInfo => {
   const config = exports = {};
 
+  config.security = {
+    csrf: { enable: false },
+  };
+  config.multipart = {
+    mode: 'file',
+    fileExtensions: [
+      '.xlsx',
+    ],
+  };
+
   config.view = {
     // root: [
     //   path.join(appInfo.baseDir, 'app/view'),
