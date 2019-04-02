@@ -79,7 +79,7 @@ module.exports = {
             });
         });
 
-        this.ctx.set('Content-Type', 'application/vnd.openxmlformats');
+        this.ctx.set('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         this.ctx.set('Content-Disposition', "attachment;filename*=UTF-8' '" + encodeURIComponent(name) + '.xlsx');
         this.ctx.body = await workbook.xlsx.writeBuffer();
     },
@@ -178,7 +178,7 @@ module.exports = {
             });
         });
 
-        this.ctx.set('Content-Type', 'application/vnd.openxmlformats');
+        this.ctx.set('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         this.ctx.set('Content-Disposition', "attachment;filename*=UTF-8" + encodeURIComponent(name) + '.xlsx');
         this.ctx.body = await workbook.xlsx.writeBuffer();
     },
